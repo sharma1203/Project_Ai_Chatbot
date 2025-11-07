@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #e0e0e0;
+}
+
+.login-container {
+    perspective: 1000px;
+}
+
+.login-box {
+    width: 380px;
+    padding: 40px;
+    background: rgba(27, 27, 43, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ai-icon {
+    width: 80px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px #00aaff);
+}
+
+.login-header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-header p {
+    color: #b0b0c0;
+    font-size: 0.9em;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #555;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #888;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #00aaff;
+    font-size: 12px;
+}
+
+.input-group input:focus {
+    border-bottom-color: #00aaff;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #00aaff, #0077ff);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 153, 255, 0.3);
+}
+
+.login-btn:hover {
+    background: linear-gradient(45deg, #0099ee, #0066ee);
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: #ff4d4d;
+    text-align: center;
+    margin-top: 15px;
+    height: 20px;
+    font-size: 0.9em;
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
